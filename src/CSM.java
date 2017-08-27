@@ -61,8 +61,8 @@ public class CSM{
 		
 		try(FileWriter fw=new FileWriter(new File(opath+TCName+".csm"))){
 			fw.write(toCSMString(tr,
-				tr.getLongitudes(),
-				tr.getLatitudes(),
+				tr.getXPositions(),
+				tr.getYPositions(),
 				tr.getAttachedData(1),
 				tr.getAttachedData(0))
 			);
@@ -151,8 +151,8 @@ public class CSM{
 		
 		int[] pos=new int[2];
 		
-		pos[0]=(int)tr.getLongitudes()[tstart];
-		pos[1]=(int)(tr.getLatitudes()[tstart]+90);
+		pos[0]=(int)tr.getXPositions()[tstart];
+		pos[1]=(int)(tr.getYPositions()[tstart]+90);
 		
 		return pos;
 	}
