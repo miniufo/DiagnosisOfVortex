@@ -22,7 +22,7 @@ public class ThermalWind{
 		DiagnosisFactory df=DiagnosisFactory.parseFile("d:/Data/DiagnosisVortex/Haima/Haima.csm");
 		DataDescriptor dd=df.getDataDescriptor();
 		CtlDescriptor ctl=((CsmDescriptor)dd).getCtlDescriptor();
-		CylindricalSpatialModel csm=(CylindricalSpatialModel)df.getSpatialModel();
+		CylindricalSpatialModel csm=new CylindricalSpatialModel((CsmDescriptor)dd);
 		
 		Range r=new Range("t(1,5)",dd);
 		
