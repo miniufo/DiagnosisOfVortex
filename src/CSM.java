@@ -63,8 +63,8 @@ public class CSM{
 			fw.write(toCSMString(tr,
 				tr.getXPositions(),
 				tr.getYPositions(),
-				tr.getAttachedData(1),
-				tr.getAttachedData(0))
+				tr.getAttachedData(Typhoon.Pmin),
+				tr.getAttachedData(Typhoon.Vmax))
 			);
 			
 		}catch(Exception e){ e.printStackTrace();System.exit(0);}
